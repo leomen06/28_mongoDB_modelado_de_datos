@@ -1,0 +1,15 @@
+1.¿Qué es el formato BSON en MongoDB?-->Rta:BSON es un formato creado por MongoDB que se encarga de almacenar los documentos en un formato binario que tengan mayor rendimiento y nuevos tipos de datos.
+2.¿Cuál es el peso máximo en un Documento en MongoDB?-->Rta:16 megabytes (MB)
+3.¿Cuál es el objetivo del documento de Workload?-->Rta:Nos ayuda a identificar la carga de la base de datos tanto de lectura de escritura, las entidades, actores y observaciones encontradas en el caso de negocio.
+4.¿Cuál es la función del comando `docker-compose up -d mongodb`?-->Rta:Levantar un contenedor que corre MongoDB 
+5.¿Cuál de las siguientes es la manera correcta de validar que en una colección los campos email y password sean requeridos?-->Rta:db.createCollection("users", { validator: { $jsonSchema: { bsonType: "object", required: ["email", "password"], }, }, });
+6.¿Cuál de las siguientes es la manera correcta de validar que en una colección el campo name sea un string?-->Rta:db.createCollection("users", { validator: { $jsonSchema: { bsonType: "object", properties: { name: { bsonType: "string", }, }, }, }, });
+7.¿Cuál de las siguientes es la manera correcta de validar que en una colección el campo age tenga un minimo y maximo?-->Rta:db.createCollection("users", { validator: { $jsonSchema: { bsonType: "object" properties: { age: { bsonType: "number", minimum: 18, maximum: 99 } }, }, }, });
+8.¿Cuál de las siguientes es la manera correcta de validar que en una colección el campo sizes sea un array con minimo un elemento?-->Rta:db.createCollection("products", { validator: { $jsonSchema: { bsonType: "object", properties: { sizes: { bsonType: "array", minItems: 1, }, }, }, }, });
+9.¿Cuándo tienes una relación 1-1 el 90% de los casos se expresa como una relación embebida?-->Rta:TRUE
+10.¿Cuál es el caso más común en donde una relación 1-1 puede ir de forma referenciada?-->Rta:Cuando el documento está pasando el límite de los 16 MB en peso.
+11.Cuándo tenemos una relación de uno a pocos: ¿esta relación se expresa de forma embebida o referenciada?-->Rta:Se expresa de forma embebida
+12.Cuándo tenemos una relación de uno a muchos: ¿esta relación se expresa de forma embebida o referenciada?-->Rta:Se expresa de forma referenciada
+13.Cuándo tenemos una relación de muchos a muchos: ¿esta relación se expresa de forma embebida o referenciada?-->Rta:Se expresa de forma referenciada
+14.¿Qué es la Desnormalización en MongoDB?-->Rta:Es una técnica utilizada para almacenar datos redundantes en un documento para evitar tener que realizar múltiples consultas.
+15.¿Qué es el Computed Pattern en MongoDB?-->Rta:Es un patrón que se basa en hacer precálculos a medida que se ingresan valores a la DB con el fin de evitar consultar un gran volumen de documentos para obtener un resultado.
